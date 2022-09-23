@@ -1,115 +1,77 @@
 *{
-    background-color: beige;
+    background-color: black;
+    color:white;
 }
-header {
+
+body{
     display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 10vh;
+    flex-direction: column;
     justify-content: center;
-    background-color: aquamarine;
-    font-size: 30px;
-    font-family: 'Open Sans', sans-serif; 
+    align-items: center;
+    margin: 3rem;
+    
 }
 
 #flex-container{
-    display: flex;
-    justify-content: space-around;
-    margin-right: 10%;
-    padding: 20px;
     font-family: 'Open Sans', sans-serif; 
-    font-size: 20px;
-    width:100vw;
-}
-
-#option-container{
-    display: flex;
-    flex-direction: column;
-    padding-left: 200px;
-    width: 10vw;
-}
-
-
-#reset-counter{
-    background-color: black;
-    color: white;
+    font-size: 25px;
 }
 
 #counter{
-    background-color: rgb(145, 89, 197);
-    height: 20vh;
-    text-align: center;
-}
-
-#counter span{
-    background-color: rgb(145, 89, 197);
-    color: white;
+    margin-bottom: 1rem;
 }
 
 #game-container{
     display: flex;
-    width: 20vw;
+    width: 600px;
     flex-wrap: wrap;
+    margin-top: 3rem;
+    font-size: 100px;
+    cursor: pointer;
+}
+
+.square{
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #up-left{
-    width: 4vw;
-    height: 8vh;
-    margin-left: 40px;
-    border-right: 3px black solid;
-    border-bottom: 3px black solid;
+    border-right: 5px whitesmoke solid;
+    border-bottom: 5px whitesmoke solid;
 }
 
 #up-middle{
-    width: 4vw;
-    height: 8vh;
-    border-right: 3px black solid;
-    border-bottom: 3px black solid;
+    border-right: 5px whitesmoke solid;
+    border-bottom: 5px whitesmoke solid;
 }
 
 #up-right{
-    width: 4vw;
-    height: 8vh;
-    border-bottom: 3px black solid;
-
+    border-bottom: 5px whitesmoke solid;
 }
 
 #middle-left{
-    width: 4vw;
-    height: 8vh;
-    margin-left: 40px;
-    border-right: 3px black solid;
-    border-bottom: 3px black solid;
+    border-right: 5px whitesmoke solid;
+    border-bottom: 5px whitesmoke solid;
+   
 }
 
 #middle-middle{
-    width: 4vw;
-    height: 8vh;
-    border-right: 3px black solid;
-    border-bottom: 3px black solid;
+    border-right: 5px whitesmoke solid;
+    border-bottom: 5px whitesmoke solid;
 }
 
 #middle-right{
-    width: 4vw;
-    height: 8vh;
-    border-bottom: 3px black solid;
-
+    border-bottom: 5px whitesmoke solid;
 }
 
 #down-left{
-    width: 4vw;
-    height: 8vh;
-    margin-left: 40px;
-    border-right: 3px black solid;
+    border-right: 5px whitesmoke solid;
 }
 
 #down-middle{
-    width: 4vw;
-    height: 8vh;
-    border-right: 3px black solid;
+    border-right: 5px whitesmoke solid;
 }
 
-#down-right{
-    width: 4vw;
-    height: 8vh;
-}

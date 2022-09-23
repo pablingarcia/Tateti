@@ -10,11 +10,11 @@ for (let index = 0; index < cuadrados.length; index++) {
         if(cuadrados[index].textContent != "") return;
 
         if(estadoJuego === "P1"){
-            cuadrados[index].textContent= "X"
+            cuadrados[index].textContent= "✖"
             estadoJuego = "P2"
             
         } else if(estadoJuego === "P2"){
-            cuadrados[index].textContent= "⊛"
+            cuadrados[index].textContent= "〇"
         
             estadoJuego = "P1"
         } else return;
