@@ -36,7 +36,7 @@ function revisarGanador() {
 
     }
 
-    console.log(posiciones);
+    // console.log(posiciones);
 
     //horizontales
 
@@ -48,7 +48,10 @@ function revisarGanador() {
             posiciones[index * 3] === posiciones[index * 3 + 2] &&
             posiciones[index * 3] !== "") {
 
-            console.log("ganador linea:", index + 1);
+            // console.log("ganador linea:", index + 1);
+
+
+            ganar([index * 3, index * 3 + 1, index * 3 + 2])
         }
     }
 
@@ -62,7 +65,9 @@ function revisarGanador() {
             posiciones[index] === posiciones[index + 3] &&
             posiciones[index] === posiciones[index + 6]) {
 
-            console.log("ganador columna:", index + 1);
+            // console.log("ganador columna:", index + 1);
+
+            ganar([index, index + 3, index + 6])
         }
 
     }
@@ -74,13 +79,48 @@ function revisarGanador() {
     if (posiciones[0] !== "" &&
         posiciones[0] === posiciones[4] &&
         posiciones[0] === posiciones[8]) {
-        console.log("ganador oblicua arriba para abajo");
+
+        ganar([0, 4, 8]);
+
+        //console.log("ganador oblicua arriba para abajo");
     }
 
     if (posiciones[6] !== "" &&
         posiciones[6] === posiciones[4] &&
         posiciones[6] === posiciones[2]) {
-        console.log("ganador oblicua abajo para arriba");
+
+        ganar([6, 4, 2]);
+
+        //console.log("ganador oblicua abajo para arriba");
     }
 
 }
+
+function ganar(posicionGanadora) {
+
+
+    if (estadoJuego === "P2") {
+        let ganadorP1 = document.getElementById("player1-score");
+        let suma = parseInt(ganadorP1.innerText) + 1;
+        ganadorP1.innerText = suma;
+    } else if (estadoJuego === "P1") {
+        let ganadorP2 = document.getElementById("player2-score");
+        ganadorP2.innerText = parseInt(ganadorP2.innerText) + 1;
+    }
+
+        marcarCuadrado(posicionGanadora[0]);
+        marcarCuadrado(posicionGanadora[1]);
+        marcarCuadrado(posicionGanadora[2]);
+        
+    estadoJuego = "Ganador";
+
+     console.log(posicionGanadora);
+
+
+}
+
+
+function marcarCuadrado(cuadrado) {
+    cuadrados[cuadrado].classList.add("ganador");
+}
+
