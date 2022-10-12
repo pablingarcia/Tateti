@@ -21,6 +21,8 @@ for (let index = 0; index < cuadrados.length; index++) {
 
         revisarGanador()
 
+        modalGanador();
+
     })
 }
 
@@ -96,6 +98,8 @@ function revisarGanador() {
 
 }
 
+
+
 function ganar(posicionGanadora) {
 
 
@@ -108,13 +112,14 @@ function ganar(posicionGanadora) {
         ganadorP2.innerText = parseInt(ganadorP2.innerText) + 1;
     }
 
-        marcarCuadrado(posicionGanadora[0]);
-        marcarCuadrado(posicionGanadora[1]);
-        marcarCuadrado(posicionGanadora[2]);
-        
+    marcarCuadrado(posicionGanadora[0]);
+    marcarCuadrado(posicionGanadora[1]);
+    marcarCuadrado(posicionGanadora[2]);
+
     estadoJuego = "Ganador";
 
-     console.log(posicionGanadora);
+    console.log(posicionGanadora);
+
 
 
 }
@@ -123,4 +128,53 @@ function ganar(posicionGanadora) {
 function marcarCuadrado(cuadrado) {
     cuadrados[cuadrado].classList.add("ganador");
 }
+
+
+//Cartel que se despliega cuando finaliza el juego, funcionalidad. 
+
+const modalBox = document.getElementById("modal");
+const modalContent = document.getElementById("modal-content");
+
+function modalGanador() {
+
+    if (estadoJuego === "Ganador") {
+
+        modalBox.style.display = "block";
+        estadoJuego = "P1";
+
+
+        modalBox.addEventListener("click", () => {
+
+            modalBox.style.display = "none";
+            rellenoCuadrados();
+
+        })
+
+
+
+    }
+
+}
+
+//Elimina el contenido completo de los cuadrados.
+
+function rellenoCuadrados() {
+
+    for (let index = 0; index < 9; index++) {
+
+        cuadrados[index].textContent = "";
+        cuadrados[index].classList.remove("ganador");
+    }
+
+}
+
+//Boton de reseteo cuando el juego está en empate.
+
+const reset = document.getElementById("reset-game");
+
+reset.addEventListener("click", () => {
+    for (let index = 0; index < 9; index++) {
+        cuadrados[index].textContent = "";
+    }
+})
 

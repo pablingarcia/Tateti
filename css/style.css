@@ -1,27 +1,27 @@
-*{
+* {
     background-color: black;
-    color:white;
+    color: white;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 3rem;
-    
+
 }
 
-#flex-container{
-    font-family: 'Open Sans', sans-serif; 
+#flex-container {
+    font-family: 'Open Sans', sans-serif;
     font-size: 25px;
 }
 
-#counter{
+#counter {
     margin-bottom: 1rem;
 }
 
-#game-container{
+#game-container {
     display: flex;
     width: 600px;
     flex-wrap: wrap;
@@ -30,7 +30,7 @@ body{
     cursor: pointer;
 }
 
-.square{
+.square {
     width: 180px;
     height: 180px;
     display: flex;
@@ -38,44 +38,73 @@ body{
     align-items: center;
 }
 
-#up-left{
+#up-left {
     border-right: 5px whitesmoke solid;
     border-bottom: 5px whitesmoke solid;
 }
 
-#up-middle{
+#up-middle {
     border-right: 5px whitesmoke solid;
     border-bottom: 5px whitesmoke solid;
 }
 
-#up-right{
+#up-right {
     border-bottom: 5px whitesmoke solid;
 }
 
-#middle-left{
+#middle-left {
     border-right: 5px whitesmoke solid;
     border-bottom: 5px whitesmoke solid;
-   
+
 }
 
-#middle-middle{
+#middle-middle {
     border-right: 5px whitesmoke solid;
-    border-bottom: 5px whitesmoke solid;
-}
-
-#middle-right{
     border-bottom: 5px whitesmoke solid;
 }
 
-#down-left{
+#middle-right {
+    border-bottom: 5px whitesmoke solid;
+}
+
+#down-left {
     border-right: 5px whitesmoke solid;
 }
 
-#down-middle{
+#down-middle {
     border-right: 5px whitesmoke solid;
 }
 
-.ganador{
-    background-color: lightblue;
+.ganador {
+    background-color: rgb(127, 186, 245);
+
 }
 
+#modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+
+}
+
+#modal-content {
+    width: 10%;
+    margin: 10% auto;
+    padding: 10%;
+    border: 1px solid white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+#reset-game {
+    cursor: pointer;
+    text-align: left;
+    width: 20px;
+}

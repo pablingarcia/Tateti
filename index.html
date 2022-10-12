@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,25 +10,27 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-   
-    <div id="flex-container">
-      
-        <div id="option-container">
-        <div id="counter">
-            <p id="player1">PLAYER 1 = <span id="player1-score">0</span></p>
-            <p id="ties">-</p>
-            <p id="player2"> PLAYER 2 = <span id="player2-score">0</span></p></div>
 
-        <div id="reset-counter">RESET</div>
-     
-    </div>
-        
+<body>
+
+    <div id="flex-container">
+
+        <div id="option-container">
+            <div id="counter">
+                <p id="player1">PLAYER 1 = <span id="player1-score">0</span></p>
+                <p id="ties">-</p>
+                <p id="player2"> PLAYER 2 = <span id="player2-score">0</span></p>
+            </div>
+
+            <div id="reset-game">RESET</div>
+
+        </div>
+
     </div>
 
     <div id="game-container">
         <div class="square" id="up-left"></div>
-        <div class="square" id="up-middle"></div> 
+        <div class="square" id="up-middle"></div>
         <div class="square" id="up-right"></div>
         <div class="square" id="middle-left"></div>
         <div class="square" id="middle-middle"></div>
@@ -36,10 +39,17 @@
         <div class="square" id="down-middle"></div>
         <div class="square" id="down-right"></div>
     </div>
-    
+
+    <div id="modal">
+        <div id="modal-content">
+            <p>Juego finalizado.</p>
+            <p>Presione en cualquier lugar para continuar.</p>
+        </div>
+    </div>
 
 
 
     <script src="app.js"></script>
 </body>
+
 </html>
